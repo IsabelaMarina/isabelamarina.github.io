@@ -1,0 +1,335 @@
+body{
+    background-color:rgb(249, 249, 249);
+}
+
+header{
+    /* position:fixed; */
+    /* float:left; */
+    /* top:0%; */
+    background-color:white;
+    /* clear:both; */
+    padding: 10px 10px;
+    border-bottom:solid 1px rgb(182, 182, 182);
+    font-size: 20px;
+    /* height:6rem; */
+    /* overflow:scroll; */
+    /* vertical-align: middle; */
+    /* display: flex; */
+    overflow:hidden;
+}
+
+
+main{
+    padding: 30px 15px 10px 15px;    /*Arriba derecha abajo izquierda*/
+    font-family: 'KoHo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    text-align:justify;
+}
+main h1{
+    font-family: Abel, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:5rem;
+    font-weight: bold;
+    color:rgb(105, 105, 105);
+}
+main h2{
+    font-weight: bold;
+    color:rgb(58, 58, 58);
+    font-size: 1.8em;
+    font-family: 'Marvel', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main hr{
+    border-color:rgb(202, 202, 202);
+}
+.fechas{
+    color:rgb(150, 150, 150);
+    font-style: italic;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* main p{
+    font-family: 'Alegreya Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size
+} */
+
+
+
+/*h1 específico de header*/
+header h1{
+    display:inline-block;
+    margin:0px;
+    font-size:2.5rem;   /*Por alguna razón este rem no responde al px del header*/
+    vertical-align: middle;
+    color:black;
+    /* font-variant:small-caps; */
+    /* font-family: unset; */
+}
+
+
+/*La línea divisoria*/
+hr{
+    display:block;
+    /* border: 3px; */
+    /* padding: 1px 20%; */
+    margin: 0px;
+    color:gainsboro;
+}
+
+/*Figuras globales*/
+figure{
+    display:inline;
+}
+
+.hamburger{
+    border:solid 2px rgb(117, 117, 117);
+    color:rgb(117, 117, 117);
+    display:inline-block;
+    width:3rem;
+    height:3rem;
+    border-radius: 10px;
+    margin: 0px 5px;
+    /* font-size: 1em; */
+    font-weight: bold;
+    vertical-align: middle;
+    text-align:center;
+    /* padding:0em 0px; */
+}
+.hamburger:hover, .hamburger:active{
+    background-color:rgb(117, 117, 117);
+    color:white;
+}
+.hamburgerAside{
+    position:absolute;
+    top:20px;
+    right:10px;
+}
+
+/*Este es el contenedor de hamburgerRight, no el botón directamente*/
+/*Dios esto fue difícil y estoy segura que no es la manera más eficiente*/
+.DerAbrirCont{
+    float:right;
+    height:40px;
+    padding-top:4px;
+}
+
+/*Logo del Aside Izq*/
+#LogoAside{
+    width: 10rem;
+    border-radius: 5px;
+}
+/*Logo del Header*/
+#LogoHeader{
+    width: 90%;         /*Esto genera el espacio entre imagen y borde*/
+    border-radius:50%;  /*Esto lo hace redondo*/
+    margin:5%;          /*Esto alinea la imagen al centro del contenedor*/
+}
+/*Contenedor del logo del Header*/
+#LogoHeaderCont{
+    display:inline-block;
+    /* width:35px;
+    height:35px; */
+    width: 4rem;
+    height: 4rem;
+    margin: 0px 5px 0px 10px;   /*Arriba derecha abajo izquierda*/
+    border:solid rgb(182, 182, 182) 1px;
+    padding:0px;    /*El espacio interior está hecho por margin (relativo) de la misma imagen*/
+    border-radius:50%;  /*Manualmente también hay que hacerlo redondo*/
+}
+/* header div{
+    display:inline-block;
+    vertical-align: middle;
+} */
+
+/*Ambos aside*/
+aside{
+    width: 75%;
+    max-width: 318px;  /* La mitad de 992px(md) es 496px */
+    min-width: 150px;
+    /* position:fixed; */      /*Esto debería descomentarlo más tarde*/
+    /*O no, no debería ser fixed porque debe empujar la barra de título*/
+    /*O mejor que no empuje nada, que se ponga sobre la barra*/
+    /* position:fixed; */
+    height:100vh;
+    overflow:hidden;
+    white-space:nowrap;
+}
+aside[id='Izq']{
+    background-color:rgb(31, 153, 86);
+    position: fixed;
+    top:0;
+    left:-100%;
+
+    transition-property:left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+aside[id='Der']{
+    /* width: 0%; */
+    /* float:right; */
+    background-color:rgb(13, 180, 125);
+    position: fixed;
+    top:0;
+    right:-100%;
+    /* left:unset; */
+    transition:right 0.3s ease;
+}
+
+/*Contenedor de la imagen y título dentro de aside Izq*/
+.TituloAside{
+    background:rgb(61, 75, 87);
+    /* text-align:center; */
+    color:rgb(228, 255, 213);
+    font-size:3rem;
+    padding: 20px 20px 10px 20px; /*Arriba derecha abajo izquierda*/
+    font-family: 'Segoe UI', 'Trebuchet MS', 'Lucida Sans', Verdana, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Ajustar la flecha del botón de cerrar*/
+#AsideDerCerrar{
+    font-size:1.9rem;
+}
+
+/* span[class='ArrowDown']{
+    margin-left:10px;
+    font-size:1.3rem;
+} */
+
+/*Opciones en aside, pero incluyendo el título (contenedor principal después de aside)*/
+aside nav{
+    padding:20px 20px;
+    font-size: 1.8rem;
+    font-family: 'Segoe UI', Verdana, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(5, 68, 34);
+}
+
+
+/*ul es el conjunto de opciones, este es específico de los nav por si uso uno en el resto de la página*/
+aside ul{
+    list-style-type:none;
+    padding-inline-start: 0px;
+    padding:20px 0px;
+}
+
+aside a, aside a:hover, aside a:visited, aside a:active{
+    text-decoration:none; /*Se supone que esto le quita el subrayado (underline)*/
+    display:block;
+    /* padding: 7px 10px; */
+}
+
+/*Opciones individuales (aplica a todas las de nav, incluyendo los submenús)*/
+/*Y hay que aplicárselo a los links (a), para que no queden los bordes fuera del link*/
+aside li a{
+    border-radius: 10px;
+    padding: 7px 10px; /*ArribaAbajo Lados*/
+    color:whitesmoke;
+}
+
+/*Border-radius hay que aplicarlo a li Y al link(a), o se verá raro en ocasiones*/
+aside li{
+    border-radius: 10px;
+
+    /* transition-property:background-color; */
+    /* transition-duration: 0.3s;
+    transition-timing-function: ease; */
+}
+
+/*Hay que volver a poner color a las letras en hover porque los links (a) son muy tercos*/
+aside li a:hover, aside li a:active, aside li a:visited{
+    color:whitesmoke;
+}
+
+/*Color de fondo de los li en hover (no se puede en a porque se ve mal -El borde no cubre el submenú para los casos en los que hay submenú, y yo quiero que cubra el submenú)*/
+/*Están separados para cada aside porque sus colores de fondo son diferentes*/
+aside[id='Izq'] li:hover, aside[id='Izq'] li:active{
+    background-color: rgb(19, 97, 54);
+}
+
+aside[id='Der'] li:hover, aside[id='Der'] li:active{
+    background-color: rgb(35, 109, 84);
+}
+
+/* aside[id='Der'] li a:hover, aside[id='Der'] li a:active{
+    /* background-color: rgb(35, 109, 84);
+    color:whitesmoke;
+} */
+
+/*Opciones de los submenús (cuadrito blanco, normalmente oculto)*/
+aside ul[class='SubmenuNav']{
+    background-color:white;
+    padding:0px;
+    border-radius: 10px;
+    margin: 0px 10px;   /*Arriba derecha abajo izquierda*/
+}
+
+/*Si no pongo esto el submenú se pega al borde inferior de la opción que lo contiene*/
+aside li[class="OpcionConSubmenu"]{
+    padding-bottom: 0px;
+
+    /* transition-property:padding-bottom; */
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+aside li[class="OpcionConSubmenu"]:hover{
+    padding-bottom: 10px;
+}
+
+aside li[class="OpcionConSubmenu"] ul[class="SubmenuNav"]{
+    display:none;
+    height:0;
+
+    /* transition-duration: 0.3s;
+    transition-timing-function: ease; */
+}
+aside li[class="OpcionConSubmenu"]:hover ul[class="SubmenuNav"]{
+    display:block;
+    height:100%;
+}
+
+
+
+/*La terquedad de los links otra vez*/
+aside ul[class='SubmenuNav'] li a{
+    color: rgb(105, 105, 105);
+    text-decoration:none; /*Cosos tercos en la vida*/
+}
+
+/*Cuando se hace hover sobre las opciones del submenú*/
+/*Sólo hay uno porque los submenús de los hover son iguales*/
+aside ul[class='SubmenuNav'] li a:hover, aside ul[class='SubmenuNav'] li a:active{
+    background-color:rgb(199, 199, 199);
+    color: rgb(105, 105, 105);
+}
+
+/*Ancho normal es MoBiLe (ExtraSmall: aprox 480px). Este es el predeterminado*/
+
+/*Específicos para pantallas Small (mínimo 768px) - Tablets*/
+@media screen and (min-width:768px){
+    /*Elimina el botón de abrir, ahora sólo estará disponible cuando esté cerrado el Aside respectivo*/
+    #IzqAbrir{
+        display:none;
+    }
+
+    /*Antes se ponía sobre el contenido al abrir, ahora debe desplazar el contenido*/
+    #Izq{
+        float:left;
+        top:0;
+        left:0;
+    }
+
+    /*Posicionar el main/header para que la animación no sea tanta al abrir la página. Y datos de la animación*/
+    main, header{
+        margin-left:310px;
+        transition:all 0.3s ease;
+    }
+}
+
+
+/*Específicos para pantallas Medium (mínimo 992px) - Computadores normales*/
+@media screen and (min-width:992px){
+    
+}
+
+
+/*Específicos para pantallas Large (mínimo 1200px) - Pantallas grandes, televisores*/
+@media screen and (min-width:1200px){
+    
+}

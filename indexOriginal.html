@@ -1,0 +1,122 @@
+<!-- Index de Github Site -->
+<!-- Versión ORIGINAL - Los tags ASIDE y HEADER fueron sacados de aquí y agregados a InsertElements.js, que los aplica automáticamente.
+Voy a seguir usando este documento para pruebas y modificaciones a los tags originales.
+No es necesario usar este documento para modificar el css.
+-->
+
+<!doctype html>
+<html lang="es">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Sitio Principal</title>
+    <link rel="icon" type="image/png" href="imgs/LogoMioVer.png" />
+
+    <!-- Bootstrap CSS (de algo tendrá que servir) -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="css/Principal.css">
+
+    <!-- My JavaScript -->
+    <script src="js/Principal.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <!-- JavaScript de Bootstrap -->
+    <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+
+    <!--Font Awesome CDN (Content Delivery Network)-->
+    <link rel="stylesheet"
+        href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous"
+    />
+
+</head>
+
+<body onresize="normalizar()" onload="normalizar()">
+    
+    <aside id="Izq">
+        <div class="TituloAside" id="TituloDer">
+            <figure class="Logo">
+                <img src="imgs/LogoMioVer.png" id="LogoAside" alt="Mi Sitio" title="Mi Sitio"/>
+            </figure>
+            <div class="DerAbrirCont">
+                <span id="AsideDerCerrar" class="hamburger hamburgerAside" onclick="closeAside('#Izq','left')"><i class="fas fa-chevron-left fa-1x"></i></span>
+            </div>
+            <br>
+            Mi Sitio
+        </div>
+
+        <hr>
+        
+        <nav>
+            Categorías
+            <ul class="MenuNav">
+                <li class="OpcionConSubmenu"><a href='#'>Temáticas</a>
+                    <ul class="SubmenuNav">
+                        <li><a href="ThesisTest.html">Tema 1</a></li>
+                        <li><a href='#'>Tema 2</a></li>
+                        <li><a href='#'>Tema 3</a></li>
+                    </ul>
+                </li>
+                <li><a href='#'>Simulaciones</a></li>
+                <li><a href='#'>Blog</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <aside id="Der">
+        <div class="TituloAside" id="TituloIzq">
+            Blog
+            <div class="DerAbrirCont">
+                <span id="AsideDerCerrar" class="hamburger hamburgerAside" onclick="closeAside('#Der','right')"><i class="fas fa-angle-double-right fa-1x"></i></span>
+            </div>
+        </div>
+
+        <hr>
+        
+        <nav>
+            <ul class="MenuNav">
+                <li><a href='#'>Última entrada</a></li>
+                <li class="OpcionConSubmenu"><a href='return false;'>entradas del mes</a>
+                    <ul class="SubmenuNav">
+                        <li><a href='#'>Tema 1</a></li>
+                        <li><a href='#'>Tema 2</a></li>
+                        <li><a href='#'>Tema 3</a></li>
+                    </ul>
+                </li>
+                <li><a href='#'>Historial</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <header>
+        <span id="IzqAbrir" class="hamburger" onclick="openAside('#Izq','left')"><i class="fas fa-chevron-right fa-1x"></i></span>
+        <div id="LogoHeaderCont" class="Logo"><img src="imgs/LogoMioVer.png" id="LogoHeader" alt="Mi Sitio" title="Mi Sitio"/>
+        </div>
+        <h1>Principal</h1>
+        <div class="DerAbrirCont">
+            <span id="DerAbrir" class="hamburger" onclick="openAside('#Der','right')"><i class="fas fa-angle-double-left fa-1x"></i></span>
+        </div>
+        <!-- <hr> -->
+    </header>
+
+    <main>
+        <!-- Todo lo que está en el main debería ser genérico -->
+        <h1>Título de la página</h1>
+        <p class="Fechas">Actualizado el día de hoy</p>
+        <h2>Bienvenido a la página</h2>
+        <p>Esto es un texto de ejemplo, para probar cómo se verá el texto en la página.<br>Esto es una línea con un salto de página y eso.</p>
+        <p>Este es otro párrafo para corroborar las separaciones y eso.</p>
+        <p>A continuación va una nueva imagen, al cual por cierto luego debería quitarles el width porque quedará puesto en el css</p>
+        <figure>
+            <img src="imgs/LogoMioVer.png" alt="Mi Sitio" title="Mi Sitio" width="100px"/>
+        </figure>
+    </main>
+</body>
+</html>
