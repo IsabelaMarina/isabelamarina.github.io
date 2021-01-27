@@ -31,15 +31,19 @@ function rellenar(){
         <nav>
             Categorías
             <ul class="MenuNav">
-                <li class="OpcionConSubmenu"><a href='#'>Temáticas</a>
-                    <ul class="SubmenuNav">
+                <li class="OpcionConSubmenu"><a href='#'>Temáticas (No implementado)</a>
+                    <!-- <ul class="SubmenuNav">
                         <li><a href="ThesisTest.html">Tema 1</a></li>
                         <li><a href='#'>Tema 2</a></li>
                         <li><a href='#'>Tema 3</a></li>
+                    </ul> -->
+                </li>
+                <li><a href='#'>Simulaciones</a>
+                    <ul class="SubmenuNav">
+                        <li><a href="BalanzaBrazoSim/BalanzaMecanica.html">Balanza Mecánica de brazo</a></li>
                     </ul>
                 </li>
-                <li><a href='#'>Simulaciones</a></li>
-                <li><a href='#'>Blog</a></li>
+                <li><a href='#'>Blog (No implementado)</a></li>
             </ul>
         </nav>
     </aside>
@@ -48,7 +52,7 @@ function rellenar(){
     var asideDerTemp = `
     <aside id="Der">
         <div class="TituloAside" id="TituloIzq">
-            Blog
+            Principal
             <div class="DerAbrirCont">
                 <span id="AsideDerCerrar" class="hamburger hamburgerAside" onclick="closeAside('#Der','right')"><i class="fas fa-angle-double-right fa-1x"></i></span>
             </div>
@@ -58,15 +62,15 @@ function rellenar(){
         
         <nav>
             <ul class="MenuNav">
-                <li><a href='#'>Última entrada</a></li>
-                <li class="OpcionConSubmenu"><a href='return false;'>entradas del mes</a>
+                <li><a href='#'>Opciones no implementadas</a></li>
+                <!-- <li class="OpcionConSubmenu"><a href='return false;'>entradas del mes</a>
                     <ul class="SubmenuNav">
                         <li><a href='#'>Tema 1</a></li>
                         <li><a href='#'>Tema 2</a></li>
                         <li><a href='#'>Tema 3</a></li>
                     </ul>
                 </li>
-                <li><a href='#'>Historial</a></li>
+                <li><a href='#'>Historial</a></li> -->
             </ul>
         </nav>
     </aside>
