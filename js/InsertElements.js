@@ -31,14 +31,14 @@ function rellenar(){
         <nav>
             Categorías
             <ul class="MenuNav">
-                <li class="OpcionConSubmenu"><a href='#'>Temáticas (No implementado)</a>
+                <li><a href='#'>Temáticas (No implementado)</a>
                     <!-- <ul class="SubmenuNav">
                         <li><a href="ThesisTest.html">Tema 1</a></li>
                         <li><a href='#'>Tema 2</a></li>
                         <li><a href='#'>Tema 3</a></li>
                     </ul> -->
                 </li>
-                <li><a href='#'>Simulaciones</a>
+                <li class="OpcionConSubmenu"><a href='#'>Simulaciones</a>
                     <ul class="SubmenuNav">
                         <li><a href="BalanzaBrazoSim/BalanzaMecanica.html">Balanza Mecánica de brazo</a></li>
                     </ul>
