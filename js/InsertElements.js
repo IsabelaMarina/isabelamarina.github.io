@@ -5,7 +5,7 @@ function rellenar(){
     <span id="IzqAbrir" class="hamburger" onclick="openAside('#Izq','left')"><i class="fas fa-chevron-right fa-1x"></i></span>
     <div id="LogoHeaderCont" class="Logo"><img src="imgs/LogoMioVer.png" id="LogoHeader" alt="Logo" title="Logo"/>
     </div>
-    <h1>Principal</h1>
+    <h1 id="TituloPag">Principal</h1>
     <div class="DerAbrirCont">
         <span id="DerAbrir" class="hamburger" onclick="openAside('#Der','right')"><i class="fas fa-angle-double-left fa-1x"></i></span>
     </div>
@@ -15,7 +15,7 @@ function rellenar(){
 
     var asideIzqTemp = `
     <aside id="Izq">
-        <div class="TituloAside" id="TituloDer">
+        <div class="TituloAside" id="TituloIzq">
             <figure class="Logo">
                 <img src="imgs/LogoMioVer.png" id="LogoAside" alt="Mi Sitio" title="Mi Sitio"/>
             </figure>
@@ -51,7 +51,7 @@ function rellenar(){
 
     var asideDerTemp = `
     <aside id="Der">
-        <div class="TituloAside" id="TituloIzq">
+        <div class="TituloAside" id="TituloDer">
             Principal
             <div class="DerAbrirCont">
                 <span id="AsideDerCerrar" class="hamburger hamburgerAside" onclick="closeAside('#Der','right')"><i class="fas fa-angle-double-right fa-1x"></i></span>
