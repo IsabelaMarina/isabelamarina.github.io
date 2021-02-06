@@ -41,6 +41,7 @@ function rellenar(){
                 <li class="OpcionConSubmenu"><a href='#'>Simulaciones</a>
                     <ul class="SubmenuNav">
                         <li><a href="BalanzaBrazoSim/BalanzaMecanica.html">Balanza Mecánica de brazo</a></li>
+                        <li><a href="PieDeReySim/index.html">Pie de Rey / Vernier</a></li>
                     </ul>
                 </li>
                 <li><a href='#'>Blog (No implementado)</a></li>
